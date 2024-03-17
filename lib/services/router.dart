@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:shma_client/view_models/configuration.dart';
+import 'package:shma_client/view_models/information.dart';
+import 'package:shma_client/view_models/license/license.dart';
+import 'package:shma_client/view_models/license/license_overview.dart';
 import 'package:shma_client/view_models/main.dart';
 import 'package:shma_client/view_models/settings.dart';
 import 'package:shma_client/view_models/stream.dart';
 import 'package:shma_client/views/configuration.dart';
+import 'package:shma_client/views/information.dart';
+import 'package:shma_client/views/license.dart';
+import 'package:shma_client/views/license_overview.dart';
 import 'package:shma_client/views/main.dart';
 import 'package:shma_client/views/settings.dart';
 import 'package:shma_client/views/stream.dart';
@@ -31,6 +37,10 @@ class RouterService {
       SettingsViewModel.route: (context) => const SettingsScreen(),
       StreamViewModel.route: (context) => const StreamScreen(),
       ConfigurationViewModel.route: (context) => const ConfigurationScreen(),
+      InformationViewModel.route: (context) => const InformationScreen(),
+      LicenseOverviewViewModel.route: (context) =>
+          const LicenseOverviewScreen(),
+      LicenseViewModel.route: (context) => const LicenseScreen(),
     };
   }
 

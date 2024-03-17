@@ -44,5 +44,8 @@
   "connectionDelete": "Reset connection",
   "errorConnectionFailed": "Server not reachable. Check your settings, try to reload or contact the administrator.",
   "errorChannelConnectionFailed": "Could not connect to the stream. Try later or contact the administrator.",
-  "channelStreamStopped": "Stream was terminated by the server."
+  "channelStreamStopped": "Stream was terminated by the server.",
+  "privacyPolicy": "Privacy Policy",
+  "legalInformation": "Legal Information",
+  "licenses": "Licenses"
 }

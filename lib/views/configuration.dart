@@ -5,6 +5,7 @@ import 'package:barcode_widget/barcode_widget.dart' as bc;
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:provider/provider.dart';
+import 'package:shma_client/components/header.dart';
 import 'package:shma_client/components/progress_indicator.dart';
 import 'package:shma_client/components/vertical_spacer.dart';
 import 'package:shma_client/view_models/configuration.dart';
@@ -31,7 +32,10 @@ class ConfigurationScreen extends StatelessWidget {
               return SafeArea(
                 child: Column(
                   children: [
-                    _header(context, vm),
+                    Header(
+                      title: vm.locales.connectionConfig,
+                      tooltip: vm.locales.back,
+                    ),
                     Consumer<ConfigurationViewModel>(
                       builder: (context, vm, child) {
                         return vm.state == ConfigState.init
@@ -48,33 +52,6 @@ class ConfigurationScreen extends StatelessWidget {
           );
         },
       ),
-    );
-  }
-
-  Widget _header(
-    BuildContext context,
-    ConfigurationViewModel vm,
-  ) {
-    return Row(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        IconButton(
-          onPressed: () => Navigator.pop(context, true),
-          icon: const Icon(Icons.arrow_back),
-          tooltip: vm.locales.back,
-        ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: Align(
-              alignment: Alignment.topRight,
-              child: Text(
-                vm.locales.connectionConfig,
-              ),
-            ),
-          ),
-        ),
-      ],
     );
   }
 

@@ -52,5 +52,8 @@
   "connectionDelete": "Verbindung zurücksetzen",
   "errorConnectionFailed": "Server nicht erreichbar. Überprüfen Sie ihre Einstellungen, versuchen Sie neuzuladen oder wenden Sie sich an den Admistrator.",
   "errorChannelConnectionFailed": "Es konnte kiene Verbindung mit dem Stream hergestellt. Versuchen Sie es später oder wenden Sie sich an den Administrator.",
-  "channelStreamStopped": "Stream wurde vom Server beendet."
+  "channelStreamStopped": "Stream wurde vom Server beendet.",
+  "privacyPolicy": "Datenschutzerklärung",
+  "legalInformation": "Impressum",
+  "licenses": "Lizenzen"
 }
