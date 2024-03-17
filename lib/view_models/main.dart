@@ -37,7 +37,7 @@ class MainViewModel extends ChangeNotifier {
 
     return Future<bool>.microtask(() async {
       _initApp();
-      config = await _dbService.loadConfig();
+      await _loadConfig();
       if (!config.isValid) {
         manageConfiguration();
       } else {
@@ -71,12 +71,17 @@ class MainViewModel extends ChangeNotifier {
     }
   }
 
+  Future<void> _loadConfig() async {
+    config = await _dbService.loadConfig();
+  }
+
   Future<void> manageConfiguration() async {
     await _routerService.pushNestedRoute(
       _context,
       ConfigurationViewModel.route,
     );
 
+    await _loadConfig();
     await load();
   }
 

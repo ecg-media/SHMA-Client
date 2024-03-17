@@ -93,11 +93,11 @@ class _AsyncListViewState extends State<AsyncListView> {
   @override
   Widget build(BuildContext context) {
     _items = widget.data;
-    return RawKeyboardListener(
+    return KeyboardListener(
       autofocus: true,
       focusNode: FocusNode(),
-      onKey: (event) => {
-        if (event.isKeyPressed(LogicalKeyboardKey.f5)) {_reloadData()}
+      onKeyEvent: (event) => {
+        if (event.logicalKey == LogicalKeyboardKey.f5) {_reloadData()}
       },
       child: Scaffold(
         body: Column(

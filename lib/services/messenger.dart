@@ -36,7 +36,11 @@ class MessengerService {
     return AppLocalizations.of(snackbarKey.currentContext!)!.errorChannelConnectionFailed;
   }
 
-   String get channelStreamStopped {
+  String get channelStreamStopped {
     return AppLocalizations.of(snackbarKey.currentContext!)!.channelStreamStopped;
+  }
+
+  String get justDemo {
+    return "This was just a demo. Sound stream finished here.";
   }
 }

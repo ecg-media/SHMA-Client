@@ -47,6 +47,9 @@ class StreamViewModel extends ChangeNotifier {
             }
           },
           () {
+            if (config.isDemo) {
+              _msgService.showMessage(_msgService.justDemo);
+            }
             _playerService.closePlayer();
             _streamController.close();
           },
@@ -65,7 +68,7 @@ class StreamViewModel extends ChangeNotifier {
 
   Future<void> stop() async {
     await _playerService.closePlayer();
-    await _streamController.close();
+    if (!_streamController.isClosed) await _streamController.close();
     await _socketService.stopListenToChannel();
     if (_context.mounted) Navigator.of(_context).pop();
   }

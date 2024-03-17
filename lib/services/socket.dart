@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:shma_client/models/channel.dart';
 import 'package:shma_client/models/connection.dart';
+import 'package:shma_client/util/demo.dart';
 
 /// Service that holds all routing information of the navigators of the app.
 class SocketService {
@@ -30,6 +31,13 @@ class SocketService {
     ValueSetter<List<Channel>> onChannelsReceived,
   ) async {
     if (_running) {
+      return;
+    }
+
+    if (connection.isDemo) {
+      onChannelsReceived([
+        Channel(id: 0, title: "Demo", port: 42),
+      ]);
       return;
     }
 
@@ -92,6 +100,14 @@ class SocketService {
     ValueSetter<Uint8List> onReceived,
     VoidCallback onFinished,
   ) async {
+    if (host == '127.0.0.1') {
+      for (var pcm in demo) {
+        onReceived(Uint8List.fromList(pcm));
+      }
+      onFinished();
+      return;
+    }
+
     _channelStream = await Socket.connect(host, channel.port!);
     _channelStream!.listen(
       // handle data from the server

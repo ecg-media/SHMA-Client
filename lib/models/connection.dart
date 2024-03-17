@@ -35,6 +35,8 @@ class Connection {
 
   /// Converts the current model to a json object/map.
   Map<String, dynamic> toJson() => _$ConnectionToJson(this);
+
+  bool get isDemo => host == '127.0.0.1';
 }
 
 enum ConnectionMode {
