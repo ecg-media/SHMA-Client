@@ -1,4 +1,4 @@
-package com.example.shma_client
+package de.wekode.shma_client
 
 import io.flutter.embedding.android.FlutterActivity
 
