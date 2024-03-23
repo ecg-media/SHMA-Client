@@ -120,10 +120,11 @@ class ShmaAudioHandler extends BaseAudioHandler {
     await _player?.openPlayer(enableVoiceProcessing: false);
     await _player?.startPlayerFromStream(
       codec: Codec.pcm16,
-      numChannels: 2,
+      numChannels: 1,
       sampleRate: 44100,
     );
     streamController.stream.listen((event) {
+      print(event);
       _player?.foodSink?.add(FoodData(event));
     });
   }
