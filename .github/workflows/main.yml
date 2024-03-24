@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ECG-Stream-Custom
-          path: shma-client
+          path: shma
         
   build-android:
     runs-on: ubuntu-latest
