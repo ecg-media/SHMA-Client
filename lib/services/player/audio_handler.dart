@@ -51,6 +51,7 @@ class ShmaAudioHandler extends BaseAudioHandler {
     }
 
     await _startStreaming(streamController);
+    _isLoading = false;
   }
 
   /// Cretaes new instance of the [AudioPlayer], if player not exists yet.
