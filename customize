@@ -44,7 +44,7 @@ do
 		;;
 	appTitle)
         sed -i -E "s/	<string>Shma Client<\/string>/	<string>$value<\/string>/" "$DIR/ios/Runner/Info.plist"
-	    sed -i -E "s/				INFOPLIST_KEY_CFBundleDisplayName = \"My Media Lib\";/				INFOPLIST_KEY_CFBundleDisplayName = \"$value\";/" "$DIR/ios/Runner.xcodeproj/project.pbxproj"
+	    sed -i -E "s/				INFOPLIST_KEY_CFBundleDisplayName = \"SHMA Client\";/				INFOPLIST_KEY_CFBundleDisplayName = \"$value\";/" "$DIR/ios/Runner.xcodeproj/project.pbxproj"
 		;;
 	appId)
 		sed -i -E "s/        applicationId \".*\"/        applicationId \"$value\"/" "$DIR/android/app/build.gradle"
