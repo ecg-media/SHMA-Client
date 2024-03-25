@@ -2,7 +2,7 @@
 
 ![GitHub top language](https://img.shields.io/github/languages/top/we-kode/shma-client?&logo=flutter&style=for-the-badge) ![GitHub Release Date](https://img.shields.io/github/release-date/we-kode/shma-client?label=Last%20release&style=for-the-badge) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/we-kode/shma-client?label=Version&style=for-the-badge) ![GitHub](https://img.shields.io/github/license/we-kode/shma-client?style=for-the-badge)
 
-The mobile app is part of the [SHMA](https://github.com/orgs/we-kode/projects/5) project. With this app one can listen to the streamed audio by the [SHMA-Server](https://github.com/we-kode/SHMA-Server) in one local network.
+The app is part of the [SHMA](https://github.com/orgs/we-kode/projects/5) project. With this app one can listen to the streamed audio by the [SHMA-Server](https://github.com/we-kode/SHMA-Server) in one local network.
 
 ## Supported Systems
 
